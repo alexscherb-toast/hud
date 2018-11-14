@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/containerOne"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spaceFull"
+        android:layout_marginBottom="@dimen/spaceHalf"
+        android:layout_marginStart="@dimen/spaceFull"
+        android:layout_marginEnd="@dimen/spaceHalf"
+        app:layout_constraintBottom_toTopOf="@+id/containerThree"
+        app:layout_constraintEnd_toStartOf="@id/containerTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/containerTwo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spaceFull"
+        android:layout_marginBottom="@dimen/spaceHalf"
+        android:layout_marginStart="@dimen/spaceHalf"
+        android:layout_marginEnd="@dimen/spaceFull"
+        app:layout_constraintBottom_toTopOf="@id/containerFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/containerOne"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/containerThree"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spaceHalf"
+        android:layout_marginBottom="@dimen/spaceFull"
+        android:layout_marginStart="@dimen/spaceFull"
+        android:layout_marginEnd="@dimen/spaceHalf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/containerFour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerOne"/>
+
+    <FrameLayout
+        android:id="@+id/containerFour"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spaceHalf"
+        android:layout_marginBottom="@dimen/spaceFull"
+        android:layout_marginStart="@dimen/spaceHalf"
+        android:layout_marginEnd="@dimen/spaceFull"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/containerThree"
+        app:layout_constraintTop_toBottomOf="@id/containerTwo"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
